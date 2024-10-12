@@ -1,0 +1,14 @@
+<StackLayout class="p-4">
+  <Label [text]="'Chat with ' + userId" class="text-2xl font-bold mb-4"></Label>
+  <ListView [items]="messages" height="70%">
+    <ng-template let-message="item">
+      <StackLayout [class]="message.incoming ? 'bg-gray-200 p-2 rounded-lg mb-2' : 'bg-blue-500 text-white p-2 rounded-lg mb-2 ml-auto'">
+        <Label [text]="message.text" textWrap="true"></Label>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+  <GridLayout rows="auto" columns="*, auto" class="mt-4">
+    <TextField [(ngModel)]="newMessage" hint="Type a message" row="0" col="0" class="p-2 border rounded"></TextField>
+    <Button text="Send" (tap)="sendMessage()" row="0" col="1" class="bg-blue-500 text-white p-2 rounded ml-2"></Button>
+  </GridLayout>
+</StackLayout>

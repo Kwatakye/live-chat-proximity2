@@ -1,0 +1,16 @@
+{
+  "name": "live-proximity-chat",
+  "version": "1.0.0",
+  "description": "A live proximity-based chat application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pusher": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5"
+  }
+}

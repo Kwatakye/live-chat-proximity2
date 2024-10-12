@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Nearby Users</h2>
+  <ul class="user-list">
+    <li *ngFor="let user of nearbyUsers" (click)="onUserTap(user.id)" class="user-item">
+      {{ user.name }}
+    </li>
+  </ul>
+  <button (click)="scanForNearbyUsers()" class="scan-button">Scan Again</button>
+</div>

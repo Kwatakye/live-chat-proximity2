@@ -1,0 +1,1 @@
+console.log('Proximity Chat app is loaded');
